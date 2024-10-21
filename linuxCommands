@@ -1,0 +1,22 @@
+
+ 1)How do you find all `.log` files in the `/var/log` directory that were modified more than 
+15 days ago, but exclude those files that are larger than 500MB? 
+
+  a)find /var/log -name "*.log" -mtime +15 ! -size +500M
+ 
+
+2)How can you search for all symbolic links in a directory and delete them using a single 
+`find` command? 
+
+    find /path/to/directory -type l -delete 
+	
+3))Using `find`, how do you locate files in the `/home/user` directory that are owned by a 
+user other than the current owner? 
+
+ 	find /home/user -not -user $(whoami)
+4) How can you find all files in the `/etc` directory that contain the word "config" in their 
+name and have write permission for others? 
+    find /etc -name "*config*" -perm -002
+	
+5)	
+	
